@@ -573,6 +573,9 @@ public class BEMCheckBox: UIControl, CAAnimationDelegate {
         if delegate?.responds(to: #selector(BEMCheckBoxDelegate.animationDidStop(for:))) == true {
             delegate?.animationDidStop?(for: self)
         }
+        else{
+            NSLog("animationDidStop => The delegate could not be called")
+        }
     }
 }
 
